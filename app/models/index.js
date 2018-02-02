@@ -1,5 +1,5 @@
 // const model = require('./model/name');
 
-exports.define = (db) => {
+exports.define = db => {
   // model.getModel(db);
 };
