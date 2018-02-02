@@ -28,5 +28,11 @@ beforeEach('drop tables, re-create them and populate sample data', done => {
 // including all test files
 const normalizedPath = path.join(__dirname, '.');
 fs.readdirSync(normalizedPath).forEach(file => {
-  require(`./${file}`);
+  if (fs.lstatSync(`${normalizedPath}/${file}`).isDirectory()) {
+    fs.readdirSync(`${normalizedPath}/${file}`).forEach(inFile => {
+      require(`./${file}/${inFile}`);
+    });
+  } else {
+    require(`./${file}`);
+  }
 });
