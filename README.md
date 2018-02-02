@@ -4,7 +4,7 @@ Api for Campaigns
 ## First steps
 
 #### Installing node
-Get the latest version of node from the [official website](https://nodejs.org/) or using [nvm](https://github.com/creationix/nvm)
+Get the latest version of node from the [official website](https://nodejs.org/) or using [nvm](https://github.com/creationix/nvm).
 Nvm approach is preferred.
 
 #### Getting dependencies
