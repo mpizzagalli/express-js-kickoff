@@ -1,7 +1,5 @@
-CampaignsApi
-===============
-
-Api para campanas
+# CampaignsApi
+Api for Campaigns
 
 ## First steps
 
@@ -12,15 +10,13 @@ Nvm approach is preferred.
 #### Getting dependencies
 Run ```npm install``` or ```yarn``` from rootpath of the project.
 
-#### Kickoff - Removing sample project
-Run ```node ./scripts/kick-off.js``` from project's rootpath to remove the existing sample project and start developing your app.
-
 #### Database configuration
-Before running the app, make sure you must have a postgres db created. Then, set the `$NODE_API_DB_URL` environmental variable. It should look something like: `postgres://username:password@host:port/databasename`.
-For more information feel free to glance at the [`app/orm.js`](https://github.com/Wolox/CampaignsApi/blob/master/app/orm.js#L6) file.
+Before running the app, make sure you must have a postgres db created. Then, set the `$NODE_API_DB_HOST`, `$NODE_API_DB_NAME`, `$NODE_API_DB_USERNAME`, `$NODE_API_DB_PASSWORD`, `$NODE_API_DB_PORT` environment variables.
+For more information feel free to glance at the [`app/orm.js`](https://github.com/Wolox/CampaignsApi/blob/master/app/models/index.js#L6) file.
 
 ### Migrations
 
+<!-- Check this -->
 To create a migration, run `./node_modules/.bin/sequelize migration:create --name="my-migration-name" --config ./migrations/config.js --migrations-path ./migrations/migrations`.
 
 To run them, execute `npm run migrations`.
@@ -52,7 +48,7 @@ Here is an example snippet:
 ```
 const logger = require('/app/logger');
 ...
-if (error) { 
+if (error) {
     logger.error('There is an error);
 } else {
     logger.info('There is no error);
