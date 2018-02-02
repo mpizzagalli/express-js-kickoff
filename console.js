@@ -1,7 +1,6 @@
 const repl = require('repl'),
   fs = require('fs'),
-  pjson = require('./package.json'),
-  orm = require('./app/orm');
+  pjson = require('./package.json');
 
 const convertFunctionToAsync = f => {
   return async (...args) => {
@@ -22,11 +21,10 @@ const convertObjectFunctionsToAsync = serviceMethods => {
   return asyncServiceMethods;
 };
 
-orm.init().then(() => {
+Promise.resolve().then(() => {
   const replServer = repl.start({
     prompt: `${pjson.name}> `
   });
-  replServer.context.orm = orm;
   const servicesPath = './app/services/';
   fs.readdir(servicesPath, (err, files) => {
     files.forEach(file => {
