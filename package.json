@@ -1,10 +1,10 @@
 {
   "name": "CampaignsApi",
   "version": "0.1.0",
-  "description": "Api para campanas",
+  "description": "Api for campaings",
   "engines": {
-    "node": "6.11.1",
-    "npm": "2.14.2"
+    "node": "8.9.4",
+    "npm": "5.6.0"
   },
   "scripts": {
     "console": "node console.js",
@@ -29,14 +29,14 @@
   ],
   "main": "app.js",
   "author": "Wolox",
-  "homepage": "https://github.com/Wolox/CampaignsApi",
+  "homepage": "https://git.almundo.com/smartcom/api-campaigns",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Wolox/CampaignsApi.git"
+    "url": "https://git.almundo.com/smartcom/api-campaigns.git"
   },
   "bugs": {
-    "url": "https://github.com/Wolox/CampaignsApi/issues"
+    "url": "https://git.almundo.com/smartcom/api-campaigns/issues"
   },
   "dependencies": {
     "bcrypt": "^1.0.1",
