@@ -11,13 +11,12 @@ Nvm approach is preferred.
 Run ```npm install``` or ```yarn``` from rootpath of the project.
 
 #### Database configuration
-Before running the app, make sure you must have a postgres db created. Then, set the `$NODE_API_DB_HOST`, `$NODE_API_DB_NAME`, `$NODE_API_DB_USERNAME`, `$NODE_API_DB_PASSWORD`, `$NODE_API_DB_PORT` environment variables.
+Before running the app, make sure you must have a psql db created. Then, set the `$NODE_API_DB_HOST`, `$NODE_API_DB_NAME`, `$NODE_API_DB_USERNAME`, `$NODE_API_DB_PASSWORD`, `$NODE_API_DB_PORT` environment variables.
 For more information feel free to glance at the [`app/orm.js`](https://github.com/Wolox/CampaignsApi/blob/master/app/models/index.js#L6) file.
 
 ### Migrations
 
-<!-- Check this -->
-To create a migration, run `./node_modules/.bin/sequelize migration:create --name="my-migration-name" --config ./migrations/config.js --migrations-path ./migrations/migrations`.
+To create a migration, run `./node_modules/.bin/sequelize migration:create --name="my-migration-name"`.
 
 To run them, execute `npm run migrations`.
 
@@ -34,9 +33,10 @@ By default, the environment will be **development**, but you can easily change i
 
 The environment variables should be added to the `.env` file in the form of `NAME=VALUE`, as the following example:
 ```
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=superpass
+NODE_API_DB_HOST=localhost
+NODE_API_DB_USERNAME=root
+NODE_API_DB_PASSWORD=superpass
+...
 ```
 
 **Remember not to push nor commit the `.env` file.**
